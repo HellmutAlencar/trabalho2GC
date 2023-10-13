@@ -35,7 +35,7 @@ pipeline {
         }
         stage('Code Coverage') {
             steps {
-                sh 'cd src ; java -javaagent:"../lib/jacoco/lib/jacocoagent.jar" -cp .:../lib/junit-platform-console-standalone-1.7.0-all.jar org.junit.platform.console.ConsoleLauncher --select-class TemperatureConverterTest --reports-dir="reports/jacoco"'
+                sh 'cd src ; java -javaagent:stuff/jacocoagent.jar -cp .:lib/junit-platform-console-standalone-1.7.0-all.jar org.junit.platform.console.ConsoleLauncher --select-class TemperatureConverterTest --reports-dir="reports/jacoco"'
             }
             post {
                 always {
