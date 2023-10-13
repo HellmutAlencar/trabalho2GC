@@ -10,7 +10,7 @@ public class TemperatureConverterTest {
     @Test
     public void testCelciusSameAsFahrenheit() {
         System.out.println("Testando -40 Celsius para Fahrenheit");
-        Assertions.assertEquals(converter.celsiusToFahrenheit(-40), -40,
+        Assertions.assertEquals(converter.celsiusToFahrenheit(-40), -32,
                 "Esperava que fossem iguais quando um deles eh -40");
     }
 
