@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class temperatureConverterTest --reports-dir="reports"'
+                sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class TemperatureConverterTest --reports-dir="reports"'
                 junit 'src/reports/*-jupiter.xml'
             }
         }
