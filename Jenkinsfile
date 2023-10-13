@@ -40,7 +40,7 @@ pipeline {
             post {
                 always {
                     archiveArtifacts 'src/reports/jacoco/*'
-                    cobertura(coberturaReportFile: 'stuff/jacoco-0.8.10/coverage/jacoco.xml')
+                    cobertura(coberturaReportFile: 'src/reports/jacoco/jacoco.xml')
                 }
             }
         }
