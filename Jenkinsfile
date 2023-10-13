@@ -10,7 +10,7 @@ pipeline {
                         [name: '*/main']
                     ],
                     userRemoteConfigs: [
-                        [credentialsId: 'github-ssh-key', url: 'git@github.com:HellmutAlencar/trabalho2GC.git']
+                        [credentialsId: 'trabalho', url: 'git@github.com:HellmutAlencar/trabalho2GC.git']
                     ]
                 ]
             }
