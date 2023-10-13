@@ -35,7 +35,7 @@ pipeline {
         }
         stage('Code Coverage') {
             steps {
-                sh 'cd lib/ ; wget https://repo1.maven.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.4/jacoco-maven-plugin-0.8.4-javadoc.jar'
+                sh 'cd lib/ ; wget https://repo1.maven.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.4/'
                 sh 'cd src ; java -javaagent:../lib/jacocoagent.jar -cp .:../lib/junit-platform-console-standalone-1.7.0-all.jar org.junit.platform.console.ConsoleLauncher --select-class TemperatureConverterTest --reports-dir="reports/jacoco"'
             }
             post {
