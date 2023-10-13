@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Source Code Lint') {
             steps {
-                sh 'java -jar lib/checkstyle-10.12.4-all.jar -c lib/checkstyle-config.xml .'
+                sh 'java -jar stuff/checkstyle-10.12.4-all.jar -c stuff/checkstyle-config.xml .'
             }
         }
         stage('Build') {
