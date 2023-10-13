@@ -29,13 +29,13 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'cd src/ ; java -jar ..stuff/junit-platform-console-standalone-1.10.0.jar -cp "." --select-class temperatureConverterTest --reports-dir="reports"'
+                sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class temperatureConverterTest --reports-dir="reports"'
                 junit 'src/reports/*-jupiter.xml'
             }
         }
         stage('Code Coverage') {
             steps {
-                sh 'cd src ; java -javaagent:stuff/jacocoagent.jar -cp .:..stuff/junit-platform-console-standalone-1.10.0.jar org.junit.platform.console.ConsoleLauncher --select-class TemperatureConverterTest --reports-dir="reports/jacoco"'
+                sh 'cd src ; java -javaagent:stuff/jacocoagent.jar -cp .:../lib/junit-platform-console-standalone-1.7.0-all.jar org.junit.platform.console.ConsoleLauncher --select-class TemperatureConverterTest --reports-dir="reports/jacoco"'
             }
             post {
                 always {
